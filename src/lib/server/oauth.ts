@@ -1,8 +1,8 @@
+import { env } from '$env/dynamic/private';
 import { Discord } from 'arctic';
-import {
-  DISCORD_CLIENT_ID,
-  DISCORD_CLIENT_SECRET,
-  DISCORD_REDIRECT_URI,
-} from '$env/static/private';
 
-export const discord = new Discord(DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET, DISCORD_REDIRECT_URI);
+export const discord = new Discord(
+  env.DISCORD_CLIENT_ID,
+  env.DISCORD_CLIENT_SECRET,
+  env.DISCORD_REDIRECT_URI,
+);

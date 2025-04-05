@@ -17,7 +17,15 @@
     "db:start": "docker compose up",
     "db:push": "drizzle-kit push",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "db:prod": "kubectl port-forward services/postgres 5432:5432",
+    "docker:build": "docker build -t jcgrant/startwatch .",
+    "docker:push": "docker push jcgrant/startwatch",
+    "prod:logs": "kubectl logs -f services/startwatch",
+    "prod:shell": "kubectl exec -it services/startwatch -- /bin/sh",
+    "prod:restart": "kubectl rollout restart deployment/startwatch",
+    "prod:db": "kubectl exec -it services/postgres -- psql -U root db",
+    "prod:build": "npm run docker:build && npm run docker:push && npm run prod:restart"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
