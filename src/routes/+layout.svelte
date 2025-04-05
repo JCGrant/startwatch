@@ -10,7 +10,7 @@
     <div class="flex items-center gap-4">
       <a href="/" class="flex items-center gap-2">
         <img src="/favicon.png" class="h-10 w-10" alt="logo" />
-        <span class="text-xl font-bold">Stopwatch</span>
+        <span class="text-xl font-bold">Startwatch</span>
       </a>
     </div>
     <div class="flex items-center gap-4">
