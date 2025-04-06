@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@99.9,300..700&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-/* Make buttons use pointer cursor by default */
 @layer base {
+  /* Make buttons use pointer cursor by default */
   button,
   [role='button'] {
     cursor: pointer;
@@ -12,4 +14,18 @@
   [role='button']:disabled {
     cursor: default;
   }
+
+  /* Set default background and text color */
+  body {
+    @apply bg-slate-950 text-slate-50;
+  }
+
+  /* Make fredoka the default font */
+  * {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "wdth" 100;
+  }
 }
+

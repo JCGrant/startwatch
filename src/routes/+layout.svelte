@@ -5,7 +5,7 @@
   const { data, children } = $props();
 </script>
 
-<main class="flex h-screen w-full flex-col bg-slate-950 text-white">
+<main class="flex min-h-screen w-full flex-col">
   <nav class="flex justify-between border-b-2 border-slate-900 p-2">
     <div class="flex items-center gap-4">
       <a href="/" class="flex items-center gap-2">
