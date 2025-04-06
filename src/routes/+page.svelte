@@ -22,6 +22,18 @@
     deleteConfirmModalData = undefined;
     deleteConfirmModalEl?.close();
   };
+
+  $effect(() => {
+    const cancelContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    };
+    window.addEventListener('contextmenu', cancelContextMenu);
+    return () => {
+      window.removeEventListener('contextmenu', cancelContextMenu);
+    };
+  });
 </script>
 
 <svelte:head>
