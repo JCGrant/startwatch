@@ -43,4 +43,14 @@
 >
   <span class="self-center text-[2vw] text-slate-600 italic">{startwatch.name}</span>
   <Timer startedAt={startwatch.startedAt} class="fredoka-bold mt-[-2vw] text-[8vw]" />
+  <span class="mt-[-2vw] self-center text-[2vw] text-slate-600 italic">
+    Started at {startwatch.startedAt.toLocaleString('en-GB', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    })}
+  </span>
 </div>
